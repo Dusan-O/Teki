@@ -16,9 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcS-Mh-imk">
-                                <rect key="frame" x="69" y="522" width="277" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tu es le Steve Jobs de la raclette party !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="40" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5l-W8-wcK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="514"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="60"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcS-Mh-imk">
+                                <rect key="frame" x="69" y="651" width="276" height="66"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="ET MOI ?">
                                     <backgroundConfiguration key="background"/>
@@ -27,9 +32,8 @@
                                     <color key="baseBackgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fzx-fX-qR1">
-                                <rect key="frame" x="69" y="522" width="277" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fzx-fX-qR1">
+                                <rect key="frame" x="98" y="651" width="216" height="66"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="ET MOI ?">
                                     <backgroundConfiguration key="background"/>
@@ -41,16 +45,19 @@
                                     <action selector="changeQuote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Oo-ND-H7u"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tu es le Steve Jobs de la raclette party !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5l-W8-wcK">
-                                <rect key="frame" x="-11" y="0.0" width="436" height="514"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="60"/>
-                                <color key="textColor" systemColor="systemRedColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.95294117647058818" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fzx-fX-qR1" secondAttribute="bottom" constant="237" id="4lN-KE-4UF"/>
+                            <constraint firstItem="Fzx-fX-qR1" firstAttribute="centerX" secondItem="j5l-W8-wcK" secondAttribute="centerX" id="JOw-F1-dpn"/>
+                            <constraint firstItem="Fzx-fX-qR1" firstAttribute="baseline" secondItem="LcS-Mh-imk" secondAttribute="baseline" id="Onb-PX-s4T"/>
+                            <constraint firstItem="Fzx-fX-qR1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LcS-Mh-imk" secondAttribute="leading" id="j7m-tc-I4p"/>
+                            <constraint firstItem="Fzx-fX-qR1" firstAttribute="top" secondItem="j5l-W8-wcK" secondAttribute="bottom" constant="140" id="uDR-ot-flY"/>
+                            <constraint firstItem="Fzx-fX-qR1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LcS-Mh-imk" secondAttribute="trailing" constant="-30" id="uHw-S7-cdl"/>
+                            <constraint firstItem="Fzx-fX-qR1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uJO-xg-tcR"/>
+                            <constraint firstItem="Fzx-fX-qR1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xe9-mt-fGs"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="quoteLabel" destination="j5l-W8-wcK" id="vMm-lo-vfl"/>
