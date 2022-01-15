@@ -10,7 +10,9 @@ import UIKit
 class ViewController: UIViewController {
     let celebrities = ["le Steve Jobs", "le Zinedine Zidane", "la Madonna", "le Karl Lagarfeld", "la Scarlett Johansson"]
     let activities = ["du dancefloor", "du barbecue", "de la surprise ratée", "des blagues lourdes", "de la raclette party"]
+    
     @IBOutlet weak var quoteLabel: UILabel!
+    
     @IBAction func changeQuote(_ sender: Any) {
         // Select random element among celebrtities
         let randomIndex1 = Int(arc4random_uniform(UInt32(celebrities.count)))
@@ -23,8 +25,10 @@ class ViewController: UIViewController {
         print(activity)
         
         // Modify the label text
-        quoteLabel.text = " Le texte du label a été modifié !"
+        let quote = "Tu es " + celebrity + " " + activity + " !"
         
+        quoteLabel.text = quote
+
     }
 }
     
